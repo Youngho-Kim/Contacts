@@ -1,7 +1,9 @@
 # Contacts
-1. Content Provider 중 Content Resovler 사용
-2. Permission Check하기
-[전체소스보기]
+1. Content Provider 중 Content Resovler 사용  
+[전체코드보기](https://github.com/Youngho-Kim/Contacts/blob/master/app/src/main/java/com/android/kwave/contacts/ContactActivity.java)
+2. Permission Check하기  
+[전체코드보기](https://github.com/Youngho-Kim/Contacts/blob/master/app/src/main/java/com/android/kwave/contacts/CheckPermissionActivity.java)
+
 
 
 
@@ -12,6 +14,8 @@
     
 ```
 // ContentResolver 사용------------------------------------------------------------
+     // 1. 데이터 컨텐츠의 URI(자원의 주소)를 정의
+     // 전화번호 URI = ContactsContract.CommonDataKinds.Phone.CONTENT_URI
      Uri phoneUri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;  
      
      // 2. 데이터에서 가져올 컴럼명을 정의
@@ -36,6 +40,7 @@
          
          
 ## CheckPermission
+
 ```java
 // 1. 권한체크 - 특정 권한이 있는지 시스템에 물어본다.
 if(checkSelfPermission(Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
