@@ -1,5 +1,8 @@
 # Contacts
-make new project
+1. Content Provider 중 Content Resovler 사용
+2. Permission Check하기
+[전체소스보기]
+
 
 
 ## Content Provider
