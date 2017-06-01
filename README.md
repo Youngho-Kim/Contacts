@@ -32,5 +32,27 @@ make new project
  ```       
          
          
-         
-    
+## CheckPermission
+```java
+// 1. 권한체크 - 특정 권한이 있는지 시스템에 물어본다.
+if(checkSelfPermission(Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
+   run();
+}
+else {
+   // 2. 권한이 없으면 사용자에 권한을 달라고 요청
+    String pemission[] = {Manifest.permission.READ_CONTACTS};
+    requestPermissions(pemission, REQ_PERMISSION); // -> 권한을 요구하는 팝업이 사용자 화면에 노출된다.
+}
+// 3. 사용자가 권한체크 팝업에서 권한을 승인 또는 거절하면 아래 메서드가 호출된다.
+@Override
+public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+   super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+   if(requestCode == REQ_PERMISSION){  
+      // 사용자가 권한 승인
+   else{
+      //  사용자가 권한 승인 거절
+        }
+    }
+}  
+```    
+
