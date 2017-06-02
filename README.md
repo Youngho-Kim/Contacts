@@ -5,7 +5,11 @@
 [전체코드보기](https://github.com/Youngho-Kim/Contacts/blob/master/app/src/main/java/com/android/kwave/contacts/CheckPermissionActivity.java)
 
 
-
+##### Holder와 Adapter
+    1. 홀더는 각 위젯과 XMl을 연결 시켜 주는 역할을 한다.
+    2. 홀더는 데이터와 위젯을 연결하는 역할이 아닌 위젯을 데이터가 받을 수 있는 상태로 만들어준다.
+    3. 어댑터는 인플레이터를 통해서 위젯이 세팅된 xml을 객체로 만들어준다.
+    4. 어댑터는 홀더로 인해 세팅된 위젯에 데이터를 연결시키는 역할을 한다.
 
 ## Content Provider
     // 일종의 Database(다른 앱에서 만든 Database) 관리툴
